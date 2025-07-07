@@ -207,6 +207,16 @@ The student was about to become the teacher, and Marcus had no idea what was com
     setCurrentChapter(chapterFromUrl);
   }, [chapterId]);
 
+  // Update document theme class when theme changes (since ReadingPage is outside PublicLayout)
+  useEffect(() => {
+    document.body.className = isDarkMode ? "dark-theme" : "light-theme";
+
+    // Cleanup function to remove theme classes when component unmounts
+    return () => {
+      document.body.className = "";
+    };
+  }, [isDarkMode]);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (event) => {

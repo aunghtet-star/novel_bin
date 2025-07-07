@@ -8,55 +8,64 @@ const HomePage = () => {
     {
       id: 1,
       title: "MMORPG: Rebirth as an Alchemist",
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
       genre: "Fantasy",
     },
     {
       id: 2,
       title: "Top Tier Providence, Secretly Cultivate for a Thousand Years",
-      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=400&fit=crop",
       genre: "Cultivation",
     },
     {
       id: 3,
       title: "Martial Peak",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
       genre: "Martial Arts",
     },
     {
       id: 4,
       title: "A Regressor's Tale of Cultivation",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
       genre: "Fantasy",
     },
     {
       id: 5,
       title: "Longevity Martial Arts: Grinding Experience in the Chaotic World",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=300&h=400&fit=crop",
       genre: "Martial Arts",
     },
     {
       id: 6,
       title: "Dungeon Diver: Stealing A Monster's Power",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop",
       genre: "Adventure",
     },
     {
       id: 7,
       title: "Global Killing: Awakening SSS-level Talent At The Beginning",
-      image: "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?w=300&h=400&fit=crop",
       genre: "Action",
     },
     {
       id: 8,
       title: "Water Magician",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
       genre: "Fantasy",
     },
     {
       id: 9,
       title: "King of Gods",
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
       genre: "Fantasy",
     },
   ];
@@ -96,7 +105,11 @@ const HomePage = () => {
             {/* Novel Grid */}
             <div className="novel-grid">
               {novels.map((novel) => (
-                <Link key={novel.id} to={`/info/${novel.id}`} className="novel-card">
+                <Link
+                  key={novel.id}
+                  to={`/info/${novel.id}`}
+                  className="novel-card"
+                >
                   <div className="novel-image">
                     <img src={novel.image} alt={novel.title} />
                     <div className="novel-overlay">

@@ -4,7 +4,8 @@ import useUserStore from "../../../stores/useUserStore";
 import "./ProfilePage.css";
 
 const ProfilePage = () => {
-  const { user, updateProfile, logout, login, isAuthenticated } = useUserStore();
+  const { user, updateProfile, logout, login, isAuthenticated } =
+    useUserStore();
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     username: user?.username || "Guest User",

@@ -12,7 +12,7 @@ const ReadingHeader = ({
   showSettings,
   showChapterList,
 }) => {
-  const { isDarkMode, toggleDarkMode } = useHeaderStore();
+  const { isDarkMode, toggleTheme } = useHeaderStore();
 
   const progress = (currentChapter / novel.totalChapters) * 100;
   const currentChapterData = novel.chapters[currentChapter];
@@ -83,7 +83,7 @@ const ReadingHeader = ({
         <div className="header-right">
           <button
             className={`header-btn theme-btn`}
-            onClick={toggleDarkMode}
+            onClick={toggleTheme}
             title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
             {isDarkMode ? "☀️" : "🌙"}

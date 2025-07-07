@@ -16,7 +16,8 @@ const InfoPage = () => {
     id: parseInt(id) || 1,
     title: "MMORPG: Rebirth as an Alchemist",
     author: "MiuNovels",
-    cover: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
+    cover:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
     rating: 4.7,
     totalRatings: 1284,
     status: "Ongoing",

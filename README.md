@@ -5,17 +5,20 @@ A modern, responsive novel reading website built with React, featuring dark/ligh
 ## 🌟 Features
 
 ### 🎨 **Theme System**
+
 - **Dark/Light Mode Toggle**: Seamless theme switching with persistent preferences
 - **Custom CSS Variables**: Consistent theming across all components
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 
 ### 🔐 **Authentication System**
+
 - **Login/Register Forms**: Beautiful, animated forms with validation
 - **Social Login UI**: Ready-to-integrate social authentication buttons
 - **User State Management**: Zustand-powered authentication state with persistence
 - **Profile Management**: Complete user profile system with editable information
 
 ### 📖 **Reading Experience**
+
 - **Novel Browser**: Grid-based novel discovery with genre filtering
 - **Detailed Info Pages**: Comprehensive novel information with ratings and reviews
 - **Full Reading System**: Chapter-by-chapter reading with navigation
@@ -23,6 +26,7 @@ A modern, responsive novel reading website built with React, featuring dark/ligh
 - **Reading Settings**: Font size, theme, and layout customization
 
 ### 👤 **User Profile**
+
 - **Profile Dashboard**: User statistics, reading history, and bookmarks
 - **Reading Statistics**: Books read, current reads, favorites tracking
 - **Editable Profile**: In-place editing for user information
@@ -40,23 +44,27 @@ A modern, responsive novel reading website built with React, featuring dark/ligh
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone git@github.com:aunghtet-star/novel_bin.git
    cd novel_bin
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -102,30 +110,35 @@ src/
 ## 🎯 Key Components
 
 ### **HomePage** (`src/features/home/pages/HomePage.jsx`)
+
 - Novel grid display with genre filtering
 - Search functionality
 - Theme-aware design
 - Navigation to novel info pages
 
 ### **InfoPage** (`src/features/home/pages/InfoPage.jsx`)
+
 - Detailed novel information
 - Tabbed interface (Description, Chapters, Reviews)
 - Reading progress tracking
 - Start/Continue reading functionality
 
 ### **ReadingPage** (`src/features/reading/pages/ReadingPage.jsx`)
+
 - Full-screen reading experience
 - Chapter navigation
 - Reading settings panel
 - Progress tracking
 
 ### **ProfilePage** (`src/features/profile/pages/ProfilePage.jsx`)
+
 - User profile management
 - Reading statistics
 - Library and bookmarks
 - Editable user information
 
 ### **Authentication** (`src/features/auth/`)
+
 - Login and registration forms
 - Form validation
 - User state management
