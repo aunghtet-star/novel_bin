@@ -1,0 +1,254 @@
+/* FloatingNavigation.css */
+.floating-navigation {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.floating-navigation.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  width: 3px;
+  height: 200px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .scroll-progress {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.light .scroll-progress {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-progress-fill {
+  width: 100%;
+  border-radius: 2px;
+  transition: height 0.1s ease;
+}
+
+.dark .scroll-progress-fill {
+  background: #00d4ff;
+}
+
+.light .scroll-progress-fill {
+  background: #3b82f6;
+}
+
+/* Floating Controls */
+.floating-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid;
+}
+
+.dark .floating-controls {
+  background: rgba(10, 10, 10, 0.9);
+  border-color: #333;
+}
+
+.light .floating-controls {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #e5e7eb;
+}
+
+/* Floating Buttons */
+.floating-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dark .floating-btn {
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+.light .floating-btn {
+  color: #333;
+  border-color: #ddd;
+}
+
+.floating-btn:hover:not(.disabled) {
+  transform: scale(1.1);
+}
+
+.dark .floating-btn:hover:not(.disabled) {
+  background: #00d4ff;
+  color: #000;
+  border-color: #00d4ff;
+}
+
+.light .floating-btn:hover:not(.disabled) {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.floating-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Chapter Indicator */
+.chapter-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  min-width: 40px;
+}
+
+.dark .chapter-indicator {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid #00d4ff;
+}
+
+.light .chapter-indicator {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid #3b82f6;
+}
+
+.chapter-num {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dark .chapter-num {
+  color: #00d4ff;
+}
+
+.light .chapter-num {
+  color: #3b82f6;
+}
+
+.chapter-total {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* Reading Progress Circle */
+.reading-progress-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bg {
+  opacity: 0.2;
+}
+
+.dark .progress-bg {
+  stroke: #00d4ff;
+}
+
+.light .progress-bg {
+  stroke: #3b82f6;
+}
+
+.progress-bar {
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.dark .progress-bar {
+  stroke: #00d4ff;
+}
+
+.light .progress-bar {
+  stroke: #3b82f6;
+}
+
+.progress-text {
+  position: absolute;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.dark .progress-text {
+  color: #00d4ff;
+}
+
+.light .progress-text {
+  color: #3b82f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-navigation {
+    right: 15px;
+    transform: translateY(-50%) scale(0.9);
+  }
+  
+  .scroll-progress {
+    height: 150px;
+  }
+  
+  .floating-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  
+  .floating-controls {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-navigation {
+    right: 10px;
+    transform: translateY(-50%) scale(0.8);
+  }
+  
+  .scroll-progress {
+    height: 120px;
+    width: 2px;
+  }
+  
+  .floating-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .floating-controls {
+    padding: 8px;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,492 @@
+/* HomePage.css - Theme Support */
+
+/* Global App Theme Styles */
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme (Default) */
+.app.dark-theme {
+  background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+  color: #e0e0e0;
+}
+
+/* Light Theme */
+.app.light-theme {
+  background: linear-gradient(180deg, #2c5aa0 0%, #4a90a4 50%, #ddd 100%);
+  color: #333;
+}
+
+.homepage {
+  min-height: calc(100vh - 60px);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .header {
+  background: #111111;
+  border-bottom: 1px solid #333;
+}
+
+.light-theme .header {
+  background: #1e3a8a;
+  border-bottom: 1px solid #2563eb;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.dark-theme .logo {
+  color: #00d4ff;
+}
+
+.light-theme .logo {
+  color: white;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .nav-item {
+  color: #e0e0e0;
+}
+
+.light-theme .nav-item {
+  color: white;
+}
+
+.dark-theme .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00d4ff;
+}
+
+.light-theme .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f0f9ff;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-container {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .search-container {
+  background: #2d2d2d;
+  border: 1px solid #444;
+}
+
+.light-theme .search-container {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  width: 250px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .search-input {
+  background: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.light-theme .search-input {
+  background: white;
+  color: #333;
+}
+
+.dark-theme .search-input::placeholder {
+  color: #888;
+}
+
+.light-theme .search-input::placeholder {
+  color: #666;
+}
+
+.search-btn {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .search-btn {
+  background: #00d4ff;
+  color: #111;
+}
+
+.light-theme .search-btn {
+  background: #f97316;
+  color: white;
+}
+
+.dark-theme .search-btn:hover {
+  background: #00b8e6;
+}
+
+.light-theme .search-btn:hover {
+  background: #ea580c;
+}
+
+.login-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .login-btn {
+  background: #00d4ff;
+  color: #111;
+}
+
+.light-theme .login-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.dark-theme .login-btn:hover {
+  background: #00b8e6;
+}
+
+.light-theme .login-btn:hover {
+  background: #2563eb;
+}
+
+/* Profile Menu Styles */
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dark-theme .profile-link {
+  background: rgba(0, 212, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.light-theme .profile-link {
+  background: rgba(59, 130, 246, 0.1);
+  color: #333;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.dark-theme .profile-link:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.light-theme .profile-link:hover {
+  background: rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid currentColor;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.settings-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content Styles */
+.subtitle {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.dark-theme .subtitle {
+  background: rgba(0, 0, 0, 0.3);
+  color: #b0b0b0;
+}
+
+.light-theme .subtitle {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.subtitle p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.main-content {
+  padding: 30px 0;
+}
+
+.hot-novels {
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.dark-theme .hot-novels {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-theme .hot-novels {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dark-theme .section-title {
+  color: #00d4ff;
+}
+
+.light-theme .section-title {
+  color: white;
+}
+
+.genre-filter {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .genre-filter {
+  background: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+.light-theme .genre-filter {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.genre-filter:focus {
+  outline: none;
+}
+
+.dark-theme .genre-filter:focus {
+  border-color: #00d4ff;
+}
+
+.light-theme .genre-filter:focus {
+  border-color: white;
+}
+
+/* Novel Grid */
+.novel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.novel-card {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dark-theme .novel-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-theme .novel-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.novel-card:hover {
+  transform: translateY(-5px);
+}
+
+.dark-theme .novel-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00d4ff;
+}
+
+.light-theme .novel-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: white;
+}
+
+.novel-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.novel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.novel-card:hover .novel-image img {
+  transform: scale(1.05);
+}
+
+.novel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px 15px 15px;
+  color: white;
+}
+
+.novel-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav {
+    gap: 15px;
+  }
+  
+  .search-input {
+    width: 200px;
+  }
+  
+  .novel-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .novel-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .novel-image {
+    height: 200px;
+  }
+  
+  .hot-novels {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,287 @@
+/* ChapterContent.css */
+.chapter-content {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chapter-content.dark {
+  background: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.chapter-content.light {
+  background: #ffffff;
+  color: #333333;
+}
+
+.chapter-article {
+  width: 100%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* Chapter Header */
+.chapter-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+}
+
+.dark .chapter-header {
+  border-bottom-color: #333;
+}
+
+.light .chapter-header {
+  border-bottom-color: #e5e7eb;
+}
+
+.chapter-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.dark .chapter-title {
+  color: #00d4ff;
+}
+
+.light .chapter-title {
+  color: #3b82f6;
+}
+
+.chapter-meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.publish-date,
+.word-count {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Chapter Text */
+.chapter-text {
+  margin-bottom: 60px;
+}
+
+.paragraph {
+  margin-bottom: 1.5em;
+  text-indent: 2em;
+  line-height: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: inherit;
+}
+
+.paragraph:first-child {
+  text-indent: 0;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Chapter Footer */
+.chapter-footer {
+  padding-top: 40px;
+  border-top: 1px solid;
+  margin-top: 40px;
+}
+
+.dark .chapter-footer {
+  border-top-color: #333;
+}
+
+.light .chapter-footer {
+  border-top-color: #e5e7eb;
+}
+
+.chapter-stats {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.dark .reading-time {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.light .reading-time {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.reading-time .label {
+  opacity: 0.8;
+}
+
+.reading-time .value {
+  font-weight: 600;
+}
+
+.chapter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark .action-btn {
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+.light .action-btn {
+  color: #333;
+  border-color: #ddd;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.dark .action-btn:hover {
+  background: #1a1a1a;
+  border-color: #00d4ff;
+}
+
+.light .action-btn:hover {
+  background: #f8fafc;
+  border-color: #3b82f6;
+}
+
+.like-btn:hover {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.comment-btn:hover {
+  color: #51cf66;
+  border-color: #51cf66;
+}
+
+.bookmark-btn:hover {
+  color: #ffd43b;
+  border-color: #ffd43b;
+}
+
+/* Loading State */
+.chapter-content.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.dark .spinner {
+  border-color: #00d4ff;
+  border-top-color: transparent;
+}
+
+.light .spinner {
+  border-color: #3b82f6;
+  border-top-color: transparent;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chapter-content {
+    padding: 30px 15px;
+  }
+  
+  .chapter-title {
+    font-size: 1.6rem;
+  }
+  
+  .chapter-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .chapter-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .action-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .chapter-content {
+    padding: 20px 10px;
+  }
+  
+  .chapter-title {
+    font-size: 1.4rem;
+  }
+  
+  .paragraph {
+    text-indent: 1em;
+  }
+  
+  .chapter-header {
+    margin-bottom: 30px;
+  }
+  
+  .chapter-footer {
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+}
